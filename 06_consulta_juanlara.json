@@ -1,0 +1,8 @@
+GET log_consultas/_search
+{
+  "query": {
+    "match_phrase": {
+      "administrador": "Juan Lara"
+    }
+  }
+}
