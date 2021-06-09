@@ -1,0 +1,30 @@
+PUT _index_template/template
+{
+  "index_patterns": [
+    "log_consultas*"
+  ],
+  "template": {
+    "settings": {
+      "number_of_shards": 1
+    },
+    "mappings": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "estado_consulta": {
+          "type": "text"
+        },
+        "servicio": {
+          "type": "text"
+        },
+        "administrador": {
+          "type": "text"
+        },
+        "consultas_realizadas": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
