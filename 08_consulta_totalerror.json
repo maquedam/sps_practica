@@ -1,0 +1,13 @@
+GET log_consultas/_search
+{
+  "query": {
+    "constant_score": {
+      "filter": {
+        "match": { "estado_consulta": "error" }
+      }
+    }
+  },
+  "aggs": {
+    "suma_consultas_realizadas": { "sum": { "field": "consultas_realizadas" } }
+  }
+}
