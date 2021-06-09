@@ -1,0 +1,8 @@
+GET log_consultas/_search
+{
+  "query": {
+    "term": {
+      "estado_consulta": "consumo"
+    }
+  }
+}
